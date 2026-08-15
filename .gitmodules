@@ -1,0 +1,12 @@
+[submodule "driveup-admin"]
+	path = driveup-admin
+	url = https://github.com/Intelact-Solutions/driveup-admin.git
+[submodule "driveup-api"]
+	path = driveup-api
+	url = https://github.com/Intelact-Solutions/driveup-api.git
+[submodule "driveup-mobile"]
+	path = driveup-mobile
+	url = https://github.com/Intelact-Solutions/driveup-mobile.git
+[submodule "driveup-portal"]
+	path = driveup-portal
+	url = https://github.com/Intelact-Solutions/driveup-portal.git

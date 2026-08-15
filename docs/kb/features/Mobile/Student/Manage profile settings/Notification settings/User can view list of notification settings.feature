@@ -1,0 +1,8 @@
+Feature: User can view list of notification settings
+
+Scenario: User can view list of notification settings
+
+Given user is on the settings page of one profile
+When user clicks on "Notification settings"
+Then user sees list of notifications
+* user can activate or deactivate notifications for the selected profile
