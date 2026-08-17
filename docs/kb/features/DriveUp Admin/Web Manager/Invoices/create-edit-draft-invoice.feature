@@ -105,3 +105,12 @@
   * driving school has set a default VAT rate in company settings
   When user is on the "Add invoice" form
   Then VAT rate is pre-filled with the default VAT rate from company settings
+
+  Scenario: Invoice references exactly one driving or course training
+  
+  Given user is driveUp admin
+  * user is on the "Add invoice" form
+  When user selects a driving training
+  * user also selects a course training
+  Then the form does not allow saving the invoice
+  * user sees a validation error that only one training can be selected
