@@ -1,7 +1,6 @@
 ---
 description: Drives web UI test automation for the DriveUp admin app (driveup-admin) using Cypress + Cucumber. Use for writing, running, and debugging Cypress E2E flows.
 mode: subagent
-model: anthropic/claude-sonnet-4-6
 permission:
   edit: allow
   bash: ask

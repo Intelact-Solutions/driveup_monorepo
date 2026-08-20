@@ -1,7 +1,6 @@
 ---
 description: Drives mobile UI test automation for the DriveUp Flutter app (driveup-mobile) using Maestro. Use for writing, running, and debugging mobile UI flows.
 mode: subagent
-model: anthropic/claude-sonnet-4-6
 permission:
   edit: allow
   bash: ask

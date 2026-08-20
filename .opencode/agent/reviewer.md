@@ -1,7 +1,6 @@
 ---
 description: Cross-platform static code reviewer for the Intelact/DriveUp ecosystem (API, Admin web, Mobile, Portal). Use to statically analyze a code change for bugs and for consistency with the implementation on the other platforms — e.g. whether an API change breaks the web or mobile UIs, or whether a mobile UI change is actually served by the API and matches web behavior.
 mode: subagent
-model: anthropic/claude-sonnet-4-6
 permission:
   edit: deny
   bash: ask

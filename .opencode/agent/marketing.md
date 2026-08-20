@@ -1,7 +1,6 @@
 ---
 description: Marketing agent for the Intelact/DriveUp ecosystem. Builds a business-level understanding of the whole product and writes social media posts about features, identifies user workflows, and produces user-friendly manuals. Use for marketing copy, feature messaging, social posts, and user guides.
 mode: subagent
-model: anthropic/claude-sonnet-4-6
 permission:
   edit: allow
   bash: ask
