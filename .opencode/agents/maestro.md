@@ -1,7 +1,8 @@
 ---
 description: Mobile UI automation engineer - builds, runs, and maintains Maestro flows for the DriveUp mobile app (Flutter).
-mode: subagent
+mode: all
 permission:
+  "atlassian_*": allow
   read: allow
   glob: allow
   grep: allow

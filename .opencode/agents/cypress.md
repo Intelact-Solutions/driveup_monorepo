@@ -1,7 +1,8 @@
 ---
 description: Web UI automation engineer - builds, runs, and maintains Cypress specs for DriveUp Admin (Angular).
-mode: subagent
+mode: all
 permission:
+  "atlassian_*": allow
   read: allow
   glob: allow
   grep: allow

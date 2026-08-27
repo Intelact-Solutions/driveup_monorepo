@@ -1,7 +1,8 @@
 ---
 description: Product owner - answers product questions from the Gherkin specifications, comparing Mobile and DriveUp Admin coverage.
-mode: subagent
+mode: all
 permission:
+  "atlassian_*": allow
   read: allow
   glob: allow
   grep: allow

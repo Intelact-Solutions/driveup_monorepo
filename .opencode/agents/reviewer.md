@@ -1,7 +1,8 @@
 ---
 description: Cross-platform code reviewer - compares code across branches and projects to find inconsistencies between admin, mobile, API, and specs.
-mode: subagent
+mode: all
 permission:
+  "atlassian_*": allow
   read: allow
   glob: allow
   grep: allow

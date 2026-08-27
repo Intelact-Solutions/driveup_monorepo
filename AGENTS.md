@@ -62,3 +62,16 @@ fallback to the file name), writes the combined Bootstrap HTML to
 Note: because it deletes source junit files, always run the merge AFTER the last
 group run; re-running it later without fresh junit files errors out with
 "No *-junit.xml reports found".
+### Cross-layer data contract verification (code reviews)
+
+When reviewing changes involving auth tokens, profile switching, or any cross-platform ID comparisons:
+
+**Never assume id == id means semantic equality.** Always trace the full chain:
+
+1. **Backend token payload** - what exact ID is serialized? (e.g., user.controller.ts puts instructor.id in selectedProfile.id)
+2. **Model deserialization** - which field receives it? (e.g., ProfileModel.selectedProfile.id)
+3. **UI comparison** - which field is it compared against? (e.g., switch_account_button.dart compared against company.id instead of company.myProfile?.id)
+
+**Case study (PR #246):** The diff looked correct (added && id check), but backend put **instructorId** in token while mobile compared against **companyId** - same variable name, different semantic meaning. Result: active profile highlight silently broken for instructors.
+
+**Rule:** In code reviews, always verify the *semantic identity* of compared IDs across layers, not just syntactic correctness.
