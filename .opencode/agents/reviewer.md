@@ -26,8 +26,8 @@ permission:
     "git push*": deny
     "git reset*": deny
     "git clean*": deny
-    "git checkout*": ask
-    "git restore*": ask
+    "git checkout*": deny
+    "git restore*": deny
 ---
 
 You are a cross-platform code reviewer for the DriveUp ecosystem. You compare implementations across branches and across projects to find inconsistencies, drift, and spec violations.

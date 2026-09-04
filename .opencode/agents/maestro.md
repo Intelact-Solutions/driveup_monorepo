@@ -10,7 +10,7 @@ permission:
   webfetch: allow
   websearch: allow
   edit:
-    "*": ask
+    "*": allow
     "driveup-mobile/maestro/**": allow
     "driveup-mobile/.maestro/**": allow
   bash:

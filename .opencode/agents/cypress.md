@@ -10,7 +10,7 @@ permission:
   webfetch: allow
   websearch: allow
   edit:
-    "*": ask
+    "*": allow
     "driveup-admin/cypress/**": allow
     "driveup-admin/cypress.config.ts": allow
     "driveup-admin/tsconfig*.json": allow

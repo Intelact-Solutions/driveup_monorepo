@@ -75,3 +75,15 @@ When reviewing changes involving auth tokens, profile switching, or any cross-pl
 **Case study (PR #246):** The diff looked correct (added && id check), but backend put **instructorId** in token while mobile compared against **companyId** - same variable name, different semantic meaning. Result: active profile highlight silently broken for instructors.
 
 **Rule:** In code reviews, always verify the *semantic identity* of compared IDs across layers, not just syntactic correctness.
+
+### Maestro: only edit flows, never app code
+
+When debugging or fixing Maestro E2E tests, **only modify files under `driveup-mobile/maestro/`**. Never edit application code (`lib/`) to add test IDs, keys, or other test hooks — the app code is owned by the Flutter team and changes there require PRs, reviews, and releases.
+
+If a flow fails because selectors are fragile (text matching, point offsets), fix it **within Maestro** by:
+- Using `optional: true` + fallback selectors
+- Adding `waitFor` / `waitForAnimationToEnd` for timing issues
+- Using `runScript` with JS to find elements by partial attributes
+- Restructuring the flow to avoid the flaky step (e.g., the `when:` conditional already handles the "already selected" case)
+
+If a legitimate testability gap exists in the app, file a ticket for the Flutter team rather than modifying `lib/`.
