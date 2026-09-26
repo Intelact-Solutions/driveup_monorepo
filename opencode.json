@@ -1,10 +1,129 @@
 {
   "$schema": "https://opencode.ai/config.json",
-  "mcp": {
-    "atlassian": {
-      "type": "remote",
-      "url": "https://mcp.atlassian.com/v1/mcp/authv2",
-      "enabled": true
+  "permission": {
+    "read": "allow",
+    "glob": "allow",
+    "grep": "allow",
+    "list": "allow",
+    "skill": "allow",
+    "lsp": "allow",
+    "webfetch": "allow",
+    "websearch": "allow",
+    "bash": {
+      "*": "ask",
+      "git status *": "allow",
+      "git diff *": "allow",
+      "git log *": "allow",
+      "npm test *": "allow",
+      "npm run test*": "allow",
+      "flutter test *": "allow",
+      "npx cypress *": "allow",
+      "maestro *": "allow",
+      "grep *": "allow",
+      "rg *": "allow",
+      "git commit *": "deny",
+      "git push *": "deny",
+      "rm -rf *": "deny",
+      "sudo *": "deny"
+    },
+    "edit": {
+      "*": "allow",
+      "*.env": "deny",
+      "*.env.*": "deny",
+      "package.json": "deny",
+      "package-lock.json": "deny",
+      "pnpm-lock.yaml": "deny",
+      "tsconfig*.json": "deny",
+      ".gitmodules": "deny",
+      ".github/**": "deny",
+      ".gitlab/**": "deny",
+      "*.key": "deny",
+      "*.pem": "deny",
+      "*.crt": "deny"
+    },
+    "task": "ask",
+    "external_directory": "ask",
+    "doom_loop": "ask"
+  },
+  "agent": {
+    "cypress": {
+      "permission": {
+        "bash": {
+          "npx cypress *": "allow",
+          "npm run test*": "allow",
+          "npm run e2e*": "allow",
+          "git commit *": "deny",
+          "git push *": "deny"
+        },
+        "edit": {
+          "cypress/**": "allow",
+          "driveup-admin/cypress/**": "allow",
+          "driveup-portal/cypress/**": "allow",
+          "driveup-api/**": "deny"
+        }
+      }
+    },
+    "explore": {
+      "permission": {
+        "edit": "deny",
+        "bash": "deny",
+        "task": "deny",
+        "webfetch": "allow",
+        "websearch": "allow"
+      }
+    },
+    "maestro": {
+      "permission": {
+        "bash": {
+          "flutter *": "allow",
+          "maestro *": "allow",
+          "npm run test*": "allow",
+          "git commit *": "deny",
+          "git push *": "deny"
+        },
+        "edit": {
+          "driveup-mobile/**/*.yaml": "allow",
+          "driveup-mobile/**/maestro/**": "allow",
+          "gnosa/**": "allow"
+        }
+      }
+    },
+    "product-owner": {
+      "permission": {
+        "edit": "deny",
+        "bash": "deny",
+        "task": "deny",
+        "webfetch": "allow",
+        "websearch": "allow"
+      }
+    },
+    "reviewer": {
+      "permission": {
+        "edit": "deny",
+        "bash": "deny",
+        "task": "deny"
+      }
+    },
+    "tester": {
+      "permission": {
+        "bash": {
+          "npm test *": "allow",
+          "flutter test *": "allow",
+          "npx cypress *": "allow",
+          "maestro *": "allow",
+          "git commit *": "deny",
+          "git push *": "deny"
+        },
+        "edit": {
+          "**/*test*/**": "allow",
+          "**/*spec*/**": "allow",
+          "cypress/**": "allow",
+          "driveup-mobile/**/test/**": "allow",
+          "driveup-admin/**/test/**": "allow",
+          "driveup-portal/**/test/**": "allow",
+          "driveup-api/**/test/**": "allow"
+        }
+      }
     }
   }
 }
