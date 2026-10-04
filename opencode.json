@@ -10,17 +10,7 @@
     "webfetch": "allow",
     "websearch": "allow",
     "bash": {
-      "*": "ask",
-      "git status *": "allow",
-      "git diff *": "allow",
-      "git log *": "allow",
-      "npm test *": "allow",
-      "npm run test*": "allow",
-      "flutter test *": "allow",
-      "npx cypress *": "allow",
-      "maestro *": "allow",
-      "grep *": "allow",
-      "rg *": "allow",
+      "*": "allow",
       "git commit *": "deny",
       "git push *": "deny",
       "rm -rf *": "deny",
@@ -48,13 +38,6 @@
   "agent": {
     "cypress": {
       "permission": {
-        "bash": {
-          "npx cypress *": "allow",
-          "npm run test*": "allow",
-          "npm run e2e*": "allow",
-          "git commit *": "deny",
-          "git push *": "deny"
-        },
         "edit": {
           "cypress/**": "allow",
           "driveup-admin/cypress/**": "allow",
@@ -66,7 +49,6 @@
     "explore": {
       "permission": {
         "edit": "deny",
-        "bash": "deny",
         "task": "deny",
         "webfetch": "allow",
         "websearch": "allow"
@@ -74,13 +56,6 @@
     },
     "maestro": {
       "permission": {
-        "bash": {
-          "flutter *": "allow",
-          "maestro *": "allow",
-          "npm run test*": "allow",
-          "git commit *": "deny",
-          "git push *": "deny"
-        },
         "edit": {
           "driveup-mobile/**/*.yaml": "allow",
           "driveup-mobile/**/maestro/**": "allow",
@@ -91,7 +66,6 @@
     "product-owner": {
       "permission": {
         "edit": "deny",
-        "bash": "deny",
         "task": "deny",
         "webfetch": "allow",
         "websearch": "allow"
@@ -100,20 +74,11 @@
     "reviewer": {
       "permission": {
         "edit": "deny",
-        "bash": "deny",
         "task": "deny"
       }
     },
     "tester": {
       "permission": {
-        "bash": {
-          "npm test *": "allow",
-          "flutter test *": "allow",
-          "npx cypress *": "allow",
-          "maestro *": "allow",
-          "git commit *": "deny",
-          "git push *": "deny"
-        },
         "edit": {
           "**/*test*/**": "allow",
           "**/*spec*/**": "allow",
