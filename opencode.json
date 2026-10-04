@@ -90,5 +90,17 @@
         }
       }
     }
+  },
+  "mcp": {
+    "jira": {
+      "type": "local",
+      "command": ["npx", "-y", "@mcp-devtools/jira"],
+      "environment": {
+        "JIRA_URL": "https://intelact.atlassian.net",
+        "JIRA_API_MAIL": "manager@intelact.co",
+        "JIRA_API_KEY": "ATATT3xFfGF0XuC-hm0qhuaHtflP0e_d4_NbczIuCjR8xH2yQY5_kj91Y7xsXL9f32xzWZo2ivDRwu2i7QrC5aBLhxNbMNG7ud5McXa49VWkcnk73iDaaNjFhmzJO0MVPqUxhy-is53zNcxOvKsQCYHUs_jse6mXzV5941NFLL_lB00Bno9SO-Y=CF79BFAC"
+      },
+      "enabled": true
+    }
   }
 }
