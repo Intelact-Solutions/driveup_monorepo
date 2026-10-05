@@ -43,7 +43,13 @@
           "driveup-admin/cypress/**": "allow",
           "driveup-portal/cypress/**": "allow",
           "driveup-api/**": "deny"
-        }
+        },
+        "bash": "allow",
+        "task": "allow",
+        "glob": "allow",
+        "grep": "allow",
+        "read": "allow",
+        "list": "allow"
       }
     },
     "explore": {
