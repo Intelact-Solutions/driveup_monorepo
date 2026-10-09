@@ -10,7 +10,7 @@ permission:
   webfetch: allow
   edit: deny
   bash:
-    "*": ask
+    "*": allow
     "git status*": allow
     "git branch*": allow
     "git log*": allow

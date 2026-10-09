@@ -2,7 +2,6 @@
 name: tester
 description: QA tester agent with full access to DriveUp bug database (JIRA export) and test case repository (Zephyr export). Can write bug tickets, map bugs to test cases, and search historical bugs.
 mode: all
-model: opencode/nemotron-3-ultra-free
 permission:
   "atlassian_*": allow
   read:
